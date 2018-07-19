@@ -11,17 +11,13 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class ExceptionControllerAdvice extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(value = {ProductNotFoundException.class})
-    protected ResponseEntity<Error> handleProductNotFoundException(RuntimeException ex) {
-
-        // Cast the exception to Domain Exception
-        // Note - spring guarantees the exception passed here matches the annotation
-        ProductNotFoundException pEx = (ProductNotFoundException) ex;
+    protected ResponseEntity<Error> handle(ProductNotFoundException ex) {
 
         // Change the response to use the correct status code
         // The response body is a JSON encoded Error
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
-                .body(new Error(pEx.getMessage(), pEx.getCode()));
+                .body(new Error(ex.getMessage(), ex.getCode()));
     }
 
 }
