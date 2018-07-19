@@ -49,9 +49,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<!--Note that as of 2.0.0 the groupId has changed to io.cucumber -->
 			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-java</artifactId>
+			<artifactId>cucumber-java8</artifactId>
 			<version>1.2.5</version>
 			<scope>test</scope>
 		</dependency>

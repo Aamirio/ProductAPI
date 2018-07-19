@@ -12,3 +12,8 @@ Feature: Product Service
     Given a product id of "xxx999"
     When I ask for a product
     Then an error should be returned
+
+#  Scenario: A procurement officer may add a new product to the inventory
+#    Given I need to add a new product
+#    When I add a new product
+#    Then I should receive a product id
