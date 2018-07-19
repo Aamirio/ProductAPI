@@ -1,7 +1,6 @@
 package com.tech.mai.product.acceptance;
 
 import com.tech.mai.product.ProductApplication;
-import cucumber.api.PendingException;
 import cucumber.api.java8.En;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,8 +10,6 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
-
-import java.lang.annotation.Annotation;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
